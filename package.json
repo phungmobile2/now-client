@@ -6,7 +6,9 @@
   "scripts": {
     "test": "xo && ava --timeout=30s",
     "precommit": "lint-staged",
-    "travis": "travis-conditions"
+    "travis": "travis-conditions",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "lib"
@@ -43,6 +45,8 @@
   },
   "dependencies": {
     "request": "2.76.0",
-    "request-promise-native": "1.0.3"
-  }
+    "request-promise-native": "1.0.3",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
